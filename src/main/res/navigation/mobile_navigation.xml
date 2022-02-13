@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.myapplication.interfaz.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_nav_home_to_platosFragment"
+            app:destination="@id/platosFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+        <action
+            android:id="@+id/action_nav_home_to_invenarioVentasFragment"
+            app:destination="@id/invenarioVentasFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.myapplication.interfaz.pedido.PedidosFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_pedidos" >
+        <action
+            android:id="@+id/action_nav_gallery_to_platosMesaFragment3"
+            app:destination="@id/platosMesaFragment3" />
+        <action
+            android:id="@+id/action_nav_gallery_to_pedidosMesaFragment"
+            app:destination="@id/pedidosMesaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.myapplication.interfaz.domicilio.DomiciliosFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_domicilios" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_pedidosDomicilioFragment"
+            app:destination="@id/pedidosDomicilioFragment" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_platosDomiciliosFragment"
+            app:destination="@id/platosDomiciliosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/platosFragment"
+        android:name="com.example.myapplication.interfaz.plato.PlatosFragment"
+        android:label="fragment_platos"
+        tools:layout="@layout/fragment_platos" >
+        <action
+            android:id="@+id/action_platosFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_platosFragment_to_agregarPlatoFragment2"
+            app:destination="@id/agregarPlatoFragment" />
+        <action
+            android:id="@+id/action_platosFragment_to_detallePlatoFragment"
+            app:destination="@id/detallePlatoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarPlatoFragment"
+        android:name="com.example.myapplication.interfaz.plato.AgregarPlatoFragment"
+        android:label="fragment_agregar_plato"
+        tools:layout="@layout/fragment_agregar_plato" >
+        <action
+            android:id="@+id/action_agregarPlatoFragment_to_platosFragment"
+            app:destination="@id/platosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaPlatosFragment"
+        android:name="com.example.myapplication.interfaz.plato.ListaPlatosFragment"
+        android:label="fragment_lista_platos"
+        tools:layout="@layout/fragment_lista_platos" >
+        <action
+            android:id="@+id/action_listaPlatosFragment_to_detallePlatoFragment"
+            app:destination="@id/detallePlatoFragment" />
+        <action
+            android:id="@+id/action_listaPlatosFragment_to_platosFragment"
+            app:destination="@id/platosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallePlatoFragment"
+        android:name="com.example.myapplication.interfaz.plato.DetallePlatoFragment"
+        android:label="fragment_detalle_plato"
+        tools:layout="@layout/fragment_detalle_plato" >
+        <action
+            android:id="@+id/action_detallePlatoFragment_to_platosFragment"
+            app:destination="@id/platosFragment" />
+        <action
+            android:id="@+id/action_detallePlatoFragment_to_listaMaterialesFragment"
+            app:destination="@id/listaMaterialesFragment" />
+        <action
+            android:id="@+id/action_detallePlatoFragment_to_agregarMaterialesFragment"
+            app:destination="@id/agregarMaterialesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaMenuFragment"
+        android:name="com.example.myapplication.interfaz.pedido.ListaPedidosMesaFragment"
+        android:label="fragment_lista_menu"
+        tools:layout="@layout/fragment_lista_pedidos_mesa" >
+        <action
+            android:id="@+id/action_listaMenuFragment_to_pedidosMesaFragment"
+            app:destination="@id/pedidosMesaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidosMesaFragment"
+        android:name="com.example.myapplication.interfaz.pedido.PedidosMesaFragment"
+        android:label="fragment_pedidos_mesa"
+        tools:layout="@layout/fragment_pedidos_mesa" >
+        <action
+            android:id="@+id/action_pedidosMesaFragment_to_listaMenuFragment"
+            app:destination="@id/listaMenuFragment" />
+        <action
+            android:id="@+id/action_pedidosMesaFragment_to_listaMesasDesocupadasFragment"
+            app:destination="@id/listaMesasDesocupadasFragment" />
+        <action
+            android:id="@+id/action_pedidosMesaFragment_to_platosMesaFragment3"
+            app:destination="@id/platosMesaFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuPlatosFragment"
+        android:name="com.example.myapplication.interfaz.plato.MenuPlatosFragment"
+        android:label="fragment_menu_platos"
+        tools:layout="@layout/fragment_menu_platos" >
+        <action
+            android:id="@+id/action_menuPlatosFragment_to_listaMenuPlatosFragment"
+            app:destination="@id/listaMenuPlatosFragment" />
+        <action
+            android:id="@+id/action_menuPlatosFragment_to_platosMesaFragment3"
+            app:destination="@id/platosMesaFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaPedidosPlatosFragment"
+        android:name="com.example.myapplication.interfaz.pedido.ListaPedidosPlatosFragment"
+        android:label="fragment_lista_pedidos_platos"
+        tools:layout="@layout/fragment_lista_pedidos_platos" >
+        <action
+            android:id="@+id/action_listaPedidosPlatosFragment_to_platosMesaFragment3"
+            app:destination="@id/platosMesaFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaMenuPlatosFragment"
+        android:name="com.example.myapplication.interfaz.plato.ListaMenuPlatosFragment"
+        android:label="fragment_lista_menu_platos"
+        tools:layout="@layout/fragment_lista_menu_platos" >
+        <action
+            android:id="@+id/action_listaMenuPlatosFragment_to_menuPlatosFragment"
+            app:destination="@id/menuPlatosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidosDomicilioFragment"
+        android:name="com.example.myapplication.interfaz.domicilio.PedidosDomicilioFragment"
+        android:label="fragment_pedidos_domicilio"
+        tools:layout="@layout/fragment_pedidos_domicilio" >
+        <action
+            android:id="@+id/action_pedidosDomicilioFragment_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_pedidosDomicilioFragment_to_listaDomiciliosFragment"
+            app:destination="@id/listaDomiciliosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaDomiciliosFragment"
+        android:name="com.example.myapplication.interfaz.domicilio.ListaDomiciliosFragment"
+        android:label="fragment_lista_domicilios"
+        tools:layout="@layout/fragment_lista_domicilios" >
+        <action
+            android:id="@+id/action_listaDomiciliosFragment_to_pedidosDomicilioFragment"
+            app:destination="@id/pedidosDomicilioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/platosDomiciliosFragment"
+        android:name="com.example.myapplication.interfaz.domicilio.PlatosDomiciliosFragment"
+        android:label="fragment_platos_domicilios"
+        tools:layout="@layout/fragment_platos_domicilios" >
+        <action
+            android:id="@+id/action_platosDomiciliosFragment_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_platosDomiciliosFragment_to_listaPedidosPlatosFragment"
+            app:destination="@id/listaPedidosPlatosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaMesasDesocupadasFragment"
+        android:name="com.example.myapplication.interfaz.pedido.ListaMesasDesocupadasFragment"
+        android:label="fragment_lista_mesas_desocupadas"
+        tools:layout="@layout/fragment_lista_mesas_desocupadas" >
+        <action
+            android:id="@+id/action_listaMesasDesocupadasFragment_to_pedidosMesaFragment"
+            app:destination="@id/pedidosMesaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/platosMesaFragment3"
+        android:name="com.example.myapplication.interfaz.pedido.PlatosMesaFragment"
+        android:label="fragment_platos_mesa"
+        tools:layout="@layout/fragment_platos_mesa" >
+        <action
+            android:id="@+id/action_platosMesaFragment3_to_menuPlatosFragment"
+            app:destination="@id/menuPlatosFragment" />
+        <action
+            android:id="@+id/action_platosMesaFragment3_to_listaPedidosPlatosFragment"
+            app:destination="@id/listaPedidosPlatosFragment" />
+        <action
+            android:id="@+id/action_platosMesaFragment3_to_pedidosMesaFragment"
+            app:destination="@id/pedidosMesaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/invenarioVentasFragment"
+        android:name="com.example.myapplication.interfaz.inventario.InvenarioVentasFragment"
+        android:label="fragment_invenario_ventas"
+        tools:layout="@layout/fragment_invenario_ventas" >
+        <action
+            android:id="@+id/action_invenarioVentasFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_invenarioVentasFragment_to_inventarioProductosFragment"
+            app:destination="@id/inventarioProductosFragment" />
+        <action
+            android:id="@+id/action_invenarioVentasFragment_to_menuNavegacionFragment"
+            app:destination="@id/menuNavegacionFragment" />
+        <action
+            android:id="@+id/action_invenarioVentasFragment_to_listaVentasFragment"
+            app:destination="@id/listaVentasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventarioProductosFragment"
+        android:name="com.example.myapplication.interfaz.inventario.InventarioProductosFragment"
+        android:label="fragment_inventario_productos"
+        tools:layout="@layout/fragment_inventario_productos" >
+        <action
+            android:id="@+id/action_inventarioProductosFragment_to_invenarioVentasFragment"
+            app:destination="@id/invenarioVentasFragment" />
+        <action
+            android:id="@+id/action_inventarioProductosFragment_to_menuNavegacionFragment"
+            app:destination="@id/menuNavegacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaProductosFragment"
+        android:name="com.example.myapplication.interfaz.inventario.ListaProductosFragment"
+        android:label="fragment_lista_productos"
+        tools:layout="@layout/fragment_lista_productos" >
+        <action
+            android:id="@+id/action_listaProductosFragment_to_inventarioProductosFragment"
+            app:destination="@id/inventarioProductosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuNavegacionFragment"
+        android:name="com.example.myapplication.interfaz.inventario.MenuNavegacionFragment"
+        android:label="fragment_menu_navegacion"
+        tools:layout="@layout/fragment_menu_navegacion" >
+        <action
+            android:id="@+id/action_menuNavegacionFragment_to_invenarioVentasFragment"
+            app:destination="@id/invenarioVentasFragment" />
+        <action
+            android:id="@+id/action_menuNavegacionFragment_to_inventarioProductosFragment"
+            app:destination="@id/inventarioProductosFragment" />
+        <action
+            android:id="@+id/action_menuNavegacionFragment_to_invenarioVentasFragment2"
+            app:destination="@id/invenarioVentasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaVentasFragment"
+        android:name="com.example.myapplication.interfaz.inventario.ListaVentasFragment"
+        android:label="fragment_lista_ventas"
+        tools:layout="@layout/fragment_lista_ventas" >
+        <action
+            android:id="@+id/action_listaVentasFragment_to_invenarioVentasFragment"
+            app:destination="@id/invenarioVentasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaVentasProductosFragment"
+        android:name="com.example.myapplication.interfaz.inventario.listaVentasProductosFragment"
+        android:label="fragment_lista_ventas_productos"
+        tools:layout="@layout/fragment_lista_ventas_productos" />
+    <fragment
+        android:id="@+id/listaVerComprasFragment"
+        android:name="com.example.myapplication.interfaz.inventario.ListaVerComprasFragment"
+        android:label="fragment_lista_ver_compras"
+        tools:layout="@layout/fragment_lista_ver_compras" />
+    <fragment
+        android:id="@+id/listaMaterialesFragment"
+        android:name="com.example.myapplication.interfaz.inventario.ListaProductosFragment$ListaMaterialesFragment"
+        android:label="fragment_lista_materiales"
+        tools:layout="@layout/fragment_lista_materiales" >
+        <action
+            android:id="@+id/action_listaMaterialesFragment_to_detallePlatoFragment"
+            app:destination="@id/detallePlatoFragment" />
+        <action
+            android:id="@+id/action_listaMaterialesFragment_to_detallesMaterialesFragment"
+            app:destination="@id/detallesMaterialesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaAgregarMaterialesFragment"
+        android:name="com.example.myapplication.interfaz.inventario.ListaProductosFragment$ListaAgregarMaterialesFragment"
+        android:label="fragment_lista_agregar_materiales"
+        tools:layout="@layout/fragment_lista_agregar_materiales" >
+        <action
+            android:id="@+id/action_listaAgregarMaterialesFragment_to_agregarMaterialesFragment"
+            app:destination="@id/agregarMaterialesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarMaterialesFragment"
+        android:name="com.example.myapplication.AgregarMaterialesFragment"
+        android:label="fragment_agregar_materiales"
+        tools:layout="@layout/fragment_agregar_materiales" >
+        <action
+            android:id="@+id/action_agregarMaterialesFragment_to_detallePlatoFragment"
+            app:destination="@id/detallePlatoFragment" />
+        <action
+            android:id="@+id/action_agregarMaterialesFragment_to_listaAgregarMaterialesFragment"
+            app:destination="@id/listaAgregarMaterialesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesMaterialesFragment"
+        android:name="com.example.myapplication.DetallesMaterialesFragment"
+        android:label="fragment_detalles"
+        tools:layout="@layout/fragment_detalles" >
+        <action
+            android:id="@+id/action_detallesMaterialesFragment_to_listaMaterialesFragment"
+            app:destination="@id/listaMaterialesFragment" />
+        <action
+            android:id="@+id/action_detallesMaterialesFragment_to_listaModificarMaterialesFragment"
+            app:destination="@id/listaModificarMaterialesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaModificarMaterialesFragment"
+        android:name="com.example.myapplication.ListaModificarMaterialesFragment"
+        android:label="fragment_lista_modificar_materiales"
+        tools:layout="@layout/fragment_lista_modificar_materiales" >
+        <action
+            android:id="@+id/action_listaModificarMaterialesFragment_to_detallesMaterialesFragment"
+            app:destination="@id/detallesMaterialesFragment" />
+    </fragment>
+</navigation>

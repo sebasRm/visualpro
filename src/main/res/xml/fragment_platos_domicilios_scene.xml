@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end" >
+
+        <OnSwipe
+            motion:touchAnchorId="@+id/imageView26"
+            motion:dragDirection="dragDown" />
+    </Transition>
+    <ConstraintSet android:id="@+id/start" />
+    <ConstraintSet android:id="@+id/end" >
+        <Constraint
+            android:layout_height="346dp"
+            android:layout_width="760dp"
+            android:id="@+id/fragment7"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteX="42dp"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/imageView26"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="762dp"
+            android:layout_height="323dp"
+            motion:layout_constraintTop_toBottomOf="@+id/fragment7"
+            android:alpha="1"
+            motion:layout_editor_absoluteX="38dp"
+            motion:layout_editor_absoluteY="348dp" />
+        <Constraint
+            android:layout_height="81dp"
+            motion:layout_constraintStart_toStartOf="@+id/imageView14"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="762dp"
+            android:id="@+id/linearLayout4"
+            motion:layout_constraintTop_toBottomOf="@+id/scrollView7"
+            motion:layout_editor_absoluteX="138dp"
+            motion:layout_editor_absoluteY="578dp" />
+        <Constraint
+            android:id="@+id/scrollView7"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="754dp"
+            android:layout_height="226dp"
+            motion:layout_constraintTop_toBottomOf="@+id/fragment7"
+            android:alpha="1"
+            motion:layout_editor_absoluteX="47dp"
+            motion:layout_editor_absoluteY="538dp" />
+    </ConstraintSet>
+</MotionScene>

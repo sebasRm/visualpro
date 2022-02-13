@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_platos_domicilios_scene"
+    tools:context=".interfaz.pedido.PedidosFragment">
+
+    <fragment
+        android:id="@+id/fragment7"
+        android:name="com.example.myapplication.interfaz.plato.MenuPlatosFragment"
+        android:layout_width="764dp"
+        android:layout_height="273dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="767dp"
+        android:layout_height="672dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/fbascket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment7" />
+
+    <ScrollView
+        android:id="@+id/scrollView7"
+        android:layout_width="759dp"
+        android:layout_height="569dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listaDomicilios"
+                android:layout_width="743dp"
+                android:layout_height="507dp"
+                android:layout_marginBottom="32dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="762dp"
+        android:layout_height="82dp"
+        android:background="#B7850202"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView14">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblDomicilioCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:text="Cliente:"
+                android:textColor="#FAF8F8"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblDomicilioCliente2"
+                android:layout_width="75dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="8dp"
+                android:text="Subtotal:"
+                android:textColor="#FAF8F8"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/lblPrecioTotalDomicilio"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblDomicilioCliente3"
+                android:layout_width="70dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="4dp"
+                android:text="Total:"
+                android:textColor="#FAF8F8"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/lblDomicilioPrecioTotal"
+                app:layout_constraintTop_toBottomOf="@+id/lblDomicilioCliente2" />
+
+            <ImageButton
+                android:id="@+id/btnEliminarPedidoDomicilio"
+                android:layout_width="64dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/papelera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imagenFacturaDomicilio"
+                android:layout_width="162dp"
+                android:layout_height="66dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/imprimircaja"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnEliminarPedidoDomicilio"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imagenCocinaDomicilio"
+                android:layout_width="156dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="2dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/imprimircocina"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imagenFacturaDomicilio"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblPrecioTotalDomicilio"
+                android:layout_width="90dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:text="$"
+                android:textColor="#FAF7F7"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/imagenCocinaDomicilio"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblDomicilioPrecioTotal"
+                android:layout_width="90dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="$"
+                android:textColor="#FAF7F7"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/imagenCocinaDomicilio"
+                app:layout_constraintTop_toBottomOf="@+id/lblPrecioTotalDomicilio" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

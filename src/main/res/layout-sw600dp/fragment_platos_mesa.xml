@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00810202"
+    app:layoutDescription="@xml/fragment_platos_mesa_scene"
+    tools:context=".interfaz.pedido.PedidosFragment">
+
+
+    <fragment
+        android:id="@+id/fragment10"
+        android:name="com.example.myapplication.interfaz.plato.MenuPlatosFragment"
+        android:layout_width="778dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="777dp"
+        android:layout_height="671dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/fondofut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment10" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="770dp"
+        android:layout_height="568dp"
+        android:background="#7A787878"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView5"
+        tools:layout_editor_absoluteX="28dp"></LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="732dp"
+        android:layout_height="491dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView14">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lista_pedidos"
+                android:layout_width="706dp"
+                android:layout_height="507dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="783dp"
+        android:layout_height="73dp"
+        android:background="#B7850202"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView14">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/numero_Mesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:text="Número de mesa"
+                android:textColor="#FAF8F8"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnActualizarPedido"
+                android:layout_width="64dp"
+                android:layout_height="68dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/papelera"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imagenFactura"
+                android:layout_width="162dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="32dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/imprimircaja"
+                app:layout_constraintEnd_toStartOf="@+id/btnActualizarPedido"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imagenCocina"
+                android:layout_width="156dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:background="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/imprimircocina"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imagenFactura"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblPrecioTotal"
+                android:layout_width="90dp"
+                android:layout_height="29dp"
+                android:layout_marginEnd="8dp"
+                android:text="$"
+                android:textColor="#FAF7F7"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imagenCocina"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="75dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="4dp"
+        android:src="@mipmap/menup"
+        app:layout_constraintStart_toStartOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

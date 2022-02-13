@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".interfaz.plato.AgregarPlatoFragment">
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="1286dp"
+        android:layout_height="800dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/fnn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout17"
+        android:layout_width="1177dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6A0101">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="216dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="1dp"
+                app:layout_constraintStart_toEndOf="@+id/cardView4"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#960000">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="29dp"
+                        android:text="Estado"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ScrollView
+                android:layout_width="1174dp"
+                android:layout_height="146dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvMateriales"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </ScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="239dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#960000">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="27dp"
+                        android:text="Modificar"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="281dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#960000">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="25dp"
+                        android:text="Producto"
+                        android:textColor="#FDFBFB"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="146dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="1dp"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#960000">
+
+                    <TextView
+                        android:layout_width="76dp"
+                        android:layout_height="25dp"
+                        android:text="Cantidad"
+                        android:textColor="#FBFAFA"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="288dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="1dp"
+                app:layout_constraintStart_toEndOf="@+id/cardView3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#960000">
+
+                    <TextView
+                        android:layout_width="112dp"
+                        android:layout_height="23dp"
+                        android:text="Categoria"
+                        android:textColor="#F8F7F7"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="1182dp"
+        android:layout_height="336dp"
+        android:layout_marginTop="10dp"
+        android:background="#8B706F6F"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/spnModCategoria"
+                android:layout_width="356dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:entries="@array/Spinner_items"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout7"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <Spinner
+                android:id="@+id/spnestado"
+                android:layout_width="356dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:entries="@array/Spinner_estados"
+                app:layout_constraintStart_toEndOf="@+id/spnModCategoria"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <EditText
+                android:id="@+id/txtModnombrePlato"
+                android:layout_width="357dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#FAF7F7"
+                android:ems="10"
+                android:hint="Nombre del plato"
+                android:inputType="textPersonName"
+                android:textColorHint="#F6F4F4"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout7"
+                app:layout_constraintTop_toBottomOf="@+id/spnModCategoria" />
+
+            <EditText
+                android:id="@+id/txtModPrecionPlato"
+                android:layout_width="354dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#FAF7F7"
+                android:ems="10"
+                android:hint="Precio plato"
+                android:inputType="numberDecimal"
+                android:textColorHint="#FDFCFC"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout7"
+                app:layout_constraintTop_toBottomOf="@+id/txtModnombrePlato" />
+
+            <EditText
+                android:id="@+id/txtModDescripcion"
+                android:layout_width="359dp"
+                android:layout_height="79dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="#FAF9F9"
+                android:ems="10"
+                android:hint="Descripción plato"
+                android:inputType="textPersonName"
+                android:textColorHint="#F8F5F5"
+                app:layout_constraintStart_toEndOf="@+id/txtModnombrePlato"
+                app:layout_constraintTop_toBottomOf="@+id/spnestado" />
+
+            <Button
+                android:id="@+id/btnModificar"
+                android:layout_width="241dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="96dp"
+                android:layout_marginEnd="252dp"
+                android:background="#880202"
+                android:text="Modificar plato"
+                android:textColor="#FBFBFB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtModDescripcion" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="358dp"
+                android:layout_height="263dp"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnModBuscarImagen">
+
+                <ImageView
+                    android:id="@+id/imgModPlato"
+                    android:layout_width="match_parent"
+                    android:layout_height="242dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/avatars" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:text="Categoria"
+                android:textColor="#F8F5F5"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="296dp"
+                android:layout_marginTop="16dp"
+                android:text="Estado del plato"
+                android:textColor="#F8F5F5"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnModBuscarImagen"
+                android:layout_width="163dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="136dp"
+                android:layout_marginTop="16dp"
+                android:background="#910303"
+                android:text="ELEGIR IMAGEN"
+                android:textColor="#FAF9F9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAgregarMateriales"
+        android:layout_width="173dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="#830303"
+        android:text="Agregar materiales"
+        android:textColor="#FBFAFA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout17" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

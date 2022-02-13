@@ -1,0 +1,25 @@
+
+.fondoLogin{ 
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute ;
+    z-index: 0; 
+    flex: 1;
+}
+.card{
+    position: absolute;
+    opacity: 85%;   
+}
+.minh-100 {
+    height: 100vh;
+}
+.Login{
+    z-index: 1;    
+    position: absolute;
+    max-width: 35%;
+
+}
+.color{
+    background-color:rgb(49, 143, 171);
+}

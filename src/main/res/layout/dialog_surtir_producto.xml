@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="941dp"
+        android:layout_height="556dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1F537C">
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="410dp"
+                android:layout_height="73dp"
+                android:layout_marginTop="16dp"
+                android:text="Surtir Producto"
+                android:textColor="#FBF9F9"
+                android:textSize="56sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView43"
+                android:layout_width="97dp"
+                android:layout_height="78dp"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView44"
+                app:srcCompat="@mipmap/producto" />
+
+            <TextView
+                android:id="@+id/lblNombreProductoSurtir"
+                android:layout_width="127dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="32dp"
+                android:text="nombre"
+                android:textColor="#F6F3F3"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView43"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+            <TextView
+                android:id="@+id/lblFechaSurtir"
+                android:layout_width="127dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="56dp"
+                android:text="Fecha"
+                android:textColor="#F6F3F3"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/btnFechaSurtir"
+                app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="38dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="32dp"
+                android:text="id:"
+                android:textColor="#F6F3F3"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/lblNombreProductoSurtir"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+            <TextView
+                android:id="@+id/lblIdProductoSurtir"
+                android:layout_width="38dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:text="id:"
+                android:textColor="#F6F3F3"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/textView46"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+            <ImageView
+                android:id="@+id/imageView44"
+                android:layout_width="76dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="92dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView43"
+                app:srcCompat="@mipmap/precio" />
+
+            <EditText
+                android:id="@+id/edtDescripcionProducto"
+                android:layout_width="371dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="124dp"
+                android:layout_marginTop="28dp"
+                android:backgroundTint="#F6F5F5"
+                android:ems="10"
+                android:hint="Descripción del producto"
+                android:inputType="textPersonName"
+                android:textColor="#FAF7F7"
+                android:textColorHint="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/editTextPrecioProducto"
+                app:layout_constraintTop_toBottomOf="@+id/btnFechaSurtir" />
+
+            <ImageButton
+                android:id="@+id/btnFechaSurtir"
+                android:layout_width="83dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="36dp"
+                android:background="#02FFFFFF"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toEndOf="@+id/editTextPrecioProducto"
+                app:layout_constraintTop_toBottomOf="@+id/textView46"
+                app:srcCompat="@mipmap/fecha" />
+
+            <Button
+                android:id="@+id/btnResgistrarSurtir"
+                android:layout_width="164dp"
+                android:layout_height="57dp"
+                android:layout_marginBottom="16dp"
+                android:background="#2196F3"
+                android:text="Surtir producto"
+                android:textColor="#FAF7F7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextPrecioProducto"
+                android:layout_width="226dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#FBF9F9"
+                android:ems="10"
+                android:hint="Precio del producto"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FAF8F8"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView44"
+                app:layout_constraintTop_toBottomOf="@+id/imageView43" />
+
+            <EditText
+                android:id="@+id/edtCantidadProducto"
+                android:layout_width="302dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="92dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#FBF9F9"
+                android:ems="10"
+                android:hint="Cantidad"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FAF8F8"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPrecioProducto" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

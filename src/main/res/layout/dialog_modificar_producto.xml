@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="719dp"
+        android:layout_height="509dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#024277">
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="32dp"
+                android:text="Modificar un producto"
+                android:textColor="#FDFBFB"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView39"
+                android:layout_width="116dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toEndOf="@+id/textView42"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/producto" />
+
+            <EditText
+                android:id="@+id/txtNombreProductoModificar"
+                android:layout_width="350dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="116dp"
+                android:backgroundTint="#FFFEFE"
+                android:ems="10"
+                android:hint="Nombre del producto"
+                android:inputType="textPersonName"
+                android:textColor="#F4F2F2"
+                android:textColorHint="#FAF7F7"
+                app:layout_constraintStart_toEndOf="@+id/imageView41"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <ImageView
+                android:id="@+id/imageView41"
+                android:layout_width="59dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="116dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42"
+                app:srcCompat="@mipmap/producto" />
+
+            <ImageView
+                android:id="@+id/imageView42"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView41"
+                app:srcCompat="@mipmap/stock" />
+
+            <Button
+                android:id="@+id/btnModificarProducto"
+                android:layout_width="171dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="352dp"
+                android:background="#1385DF"
+                android:text="Modificar producto"
+                android:textColor="#FFFEFE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="48dp"
+                android:text="Nombre:"
+                android:textColor="#FAF8F8"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <TextView
+                android:id="@+id/lblNombreProductoModificar"
+                android:layout_width="124dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="48dp"
+                android:text="Nombre"
+                android:textColor="#FAF8F8"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/textView49"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="48dp"
+                android:text="Id:"
+                android:textColor="#FAF8F8"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/lblNombreProductoModificar"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <TextView
+                android:id="@+id/lblIdProductoModifcar"
+                android:layout_width="48dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="48dp"
+                android:text="Id:"
+                android:textColor="#FAF8F8"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/textView51"
+                app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+            <EditText
+                android:id="@+id/txtStockProductoModificar"
+                android:layout_width="346dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#F4F4F4"
+                android:ems="10"
+                android:hint="Stock minimo del producto"
+                android:inputType="number"
+                android:textColor="#FBFBFB"
+                android:textColorHint="#FDFCFC"
+                app:layout_constraintStart_toEndOf="@+id/imageView42"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombreProductoModificar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
